@@ -1,6 +1,9 @@
 # ML Analysis on Airbnb Prices in NYC
 A group of 4 people worked together to perform a machine-learning analysis for Airbnb pricing in New York City. 
 
+## Abstract 
+The Airbnb marketplace in New York City has become one of the ______, _______ marketplaces in the world. To better understand this dynamic and prestigious playground, we looked at 14 variables to see how many and to what extent each impacted the cost of one night in the Big Apple. Using various methodologies, we found that a __ model was the most predictive. We also saw –– using a Cross-Validated Random Forest Regressor –– that the size/privacy of the listing was the most predictable, followed by the number of subway lines nearby, then its placement in various neighborhoods or boroughs. Using our model, you can enter some information about your home address and we can estimate the market price.
+
 ## **Introduction: Summarize your project report in several paragraphs.**
 What is the problem? For example, what are you trying to solve? Describe the motivation.
 Why is this problem interesting? Is this problem helping us solve a bigger task in some way? Where would we find use cases for this problem?
