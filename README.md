@@ -25,7 +25,7 @@ Though the Random Forest method appears to be one of the best approaches to buil
 ## Setup
 In the Airbnb dataset, we accessed through Kaggle, the data contained 16 variables that included: id, name, host_id, host_name, neighbourhood_group, neighbourhood, latitude, longitude, room_type, price, minimum_nights, number_of_reviews, last_review, reviews_per_month, calculated_host_listings_count, and availability_365. The data contained 48,895 observations with the most popular borough being Manhattan, the most popular neighborhood being Williamsburg, and the most popular room type being an entire home or apartment. 
 
-Before we ran any models on the data, we performed the steps below in the data-cleaning process (this process is available to replicate in the `Import Data and Data Cleaning .ipynb` notebook): 
+#### Before we ran any models on the data, we performed the steps below in the data-cleaning process (this process is available to replicate in the `Import Data and Data Cleaning .ipynb` notebook): 
 1. We first created a [nearby_subway_line_counts] variable. We found a dataset with latitude and longitude for each NYC Subway Station. Then, for each Airbnb listing, we calculated its distance to stations in the same borough. Lastly, for each station within 800m, we tallied each unique line that went to those stations
 2. We dropped the columns, ['name', 'host_name', 'last_review', 'Unnamed: 0'], as they served no importance to our study.
 3. We created binary columns for the categorical variables that included ['neighbourhood_group', 'neighbourhood', 'room_type']
@@ -35,7 +35,7 @@ Before we ran any models on the data, we performed the steps below in the data-c
 
 **The final dataset, after the data-cleaning process, contained 242 variables with 48,884 observations.** 
 
-In our analysis, we ran 8 different machine-learning models. These included: 
+#### In our analysis, we ran 8 different machine-learning models. These included: 
   - Decision Tree Regression
   - Random Forest Regression
   - Lasso Regression
@@ -45,23 +45,25 @@ In our analysis, we ran 8 different machine-learning models. These included:
   - KNN Regression
   - Forward Selection Model
 
-All models we ran using Python 3 on the Jupyter Notebook environment. 
+**All models we ran using Python 3 on the Jupyter Notebook environment.** 
 
-Below are the parameters and techniques used for each model: 
+#### Below are the parameters and techniques used for each model: 
   - Decision Tree Regression: Used Kfold cross-validation (n_splits = 5) to select the optimal values for the parameters ['max_depth', 'min_samples_split', 'min_samples_leaf']
       - The optimal values were: Best max_depth: 10, Best min_samples_split: 10, and Best min_samples_leaf: 30
   - Random Forest Regression: Unable to perform cross-validation due to a lack of memory and compute power
       - The parameters were set to: max_features = 4 and n_estimators = 500
   - Lasso Regression: Used Kfold cross-validation (K=5) to select the optimal value for the alpha parameter 
       - Optimal Alpha value selected: 0.0005678305304899897
-  - Ridge Regression: Used 
-  - Partial Least Squares (PLS)
-  - Principal Component Regression (PCR)
-  - KNN Regression
-  - Forward Selection Model
-
-Describe the experimental setup, including what models you are going to run, what parameters you plan to use, and what computing environment you will execute on.
-Describe the problem setup (e.g., for neural networks, describe the network structure that you are going to use in the experiments).
+  - Ridge Regression: Used Kfold cross-validation (K=5) to select the optimal value for the alpha parameter
+      - Optimal Alpha value selected: 0.006210413169280639
+  - Partial Least Squares (PLS): Ranged the number of components from 1 - 25 and selected the number of components that resulted in the lowest train MSE
+      - Number of components selected: 11 
+  - Principal Component Regression (PCR): Ranged the number of principal components from 20 - 200 and selected the number of components that resulted in the lowest validation MSE
+      - Number of principal components selected: 200 
+  - KNN Regression: Used cross-validation to find the number of nearest neighbors that resulted in the lowest train MSE. The range of nearest neighbors was 4 - 50.
+      - Number of nearest neighbors selected: 13 
+  - Forward Selection Model: Used the highest R-squared as the parameter to select the "best" forward selection model.
+      - R-squared obtained: 0.521
 
 ## Results
 The Random Forest Regressor appeared to be the best model when estimating the most important predictors in our dataset, giving us a mean squared error (MSE) of approximately 0.19. As determined by our Random Forest model, among the most important predictors of Airbnb price were room type (whether the property was an entire house or an apartment), private room (whether or not the property contained a private room for the renter), longitude, and latitude. Our findings indicated that renting a house versus renting an apartment was the most important predictor of Airbnb price. Those who rent a house via Airbnb are more likely to pay more money than for an apartment. This makes intuitive sense as well, given that the size and amenities of a house outweigh those of an apartment-style property. Similarly, the presence of a private room in an apartment may indicate a property’s larger size and access to amenities, which may explain a higher rental price compared to properties without a private room. Additionally, the longitude and latitude of the property may indicate the trends seen in the New York City housing or real estate market. As one travels throughout New York City, there is fluctuation in the rates of crime, infrastructure quality, job markets, etc. that may influence property pricing in certain regions.
