@@ -25,6 +25,10 @@ Though the Random Forest method appears to be one of the best approaches to buil
 ## Setup
 In the Airbnb dataset, we accessed through Kaggle, the data contained 16 variables that included: id, name, host_id, host_name, neighbourhood_group, neighbourhood, latitude, longitude, room_type, price, minimum_nights, number_of_reviews, last_review, reviews_per_month, calculated_host_listings_count, and availability_365. The data contained 48,895 observations with the most popular borough being Manhattan, the most popular neighborhood being Williamsburg, and the most popular room type being an entire home or apartment. 
 
+![image](https://github.com/maggieedavisss/ML-Analysis-on-Airbnb-Prices-in-NYC/assets/151679687/7bb6627d-1d56-41d2-b77c-117cbc979d3c)
+![image](https://github.com/maggieedavisss/ML-Analysis-on-Airbnb-Prices-in-NYC/assets/151679687/d1c2c6c8-c866-4357-b697-7c2c3d36dafc)
+![image](https://github.com/maggieedavisss/ML-Analysis-on-Airbnb-Prices-in-NYC/assets/151679687/6313e32c-e31c-4281-af60-1e568d0cd74d)
+
 #### Before we ran any models on the data, we performed the steps below in the data-cleaning process (this process is available to replicate in the `Import Data and Data Cleaning .ipynb` notebook): 
 1. We first created a [nearby_subway_line_counts] variable. We found a dataset with latitude and longitude for each NYC Subway Station. Then, for each Airbnb listing, we calculated its distance to stations in the same borough. Lastly, for each station within 800m, we tallied each unique line that went to those stations
 2. We dropped the columns, ['name', 'host_name', 'last_review', 'Unnamed: 0'], as they served no importance to our study.
