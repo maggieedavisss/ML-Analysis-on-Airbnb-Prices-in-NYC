@@ -1,4 +1,7 @@
 # ML Analysis on Airbnb Prices in NYC
+![image](https://github.com/maggieedavisss/ML-Analysis-on-Airbnb-Prices-in-NYC/assets/151679687/14248e89-cd03-4d65-9738-4da538f9b558)
+
+
 **Authors: Maggie Davis, Harper Harrell, Chris Bruce, and Sweta Balaji** 
 
 # Reproduce 
