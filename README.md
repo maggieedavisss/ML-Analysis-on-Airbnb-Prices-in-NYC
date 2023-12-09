@@ -94,7 +94,7 @@ In the Airbnb dataset, we accessed through Kaggle, the data contained 16 variabl
       - R-squared obtained: 0.521
 
 ## Results
-### Ranking the Models: 
+### Ranking the Models Based on Lowest to Highest Test MSE: 
 1. **Random Forest**: 0.19035830548538796
 2. **Decision Tree Regressor**: 0.21295979454894307
 3. **Lasso**: 0.22753221424556327
