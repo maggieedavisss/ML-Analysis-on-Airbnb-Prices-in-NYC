@@ -47,6 +47,7 @@ In the Airbnb dataset, we accessed through Kaggle, the data contained 16 variabl
 
 **All models we ran using Python 3 on the Jupyter Notebook environment.** 
 
+## Parameters 
 ### Below are the parameters and techniques used for each model: 
   - #### Decision Tree Regression:
       - Used Kfold cross-validation (n_splits = 5) to select the optimal values for the parameters ['max_depth', 'min_samples_split', 'min_samples_leaf']
