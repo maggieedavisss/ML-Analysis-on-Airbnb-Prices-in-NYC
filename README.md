@@ -22,16 +22,32 @@ We aim to use various feature selection models to help us determine the most imp
 Though the Random Forest method appears to be one of the best approaches to building our model, there are limitations in executing the algorithm. Firstly, in order to increase the accuracy of our model, we must increase the number of decision trees. However, increasing the number of decision trees within the model may require more computing power and decrease the computing speed. Therefore, for the scope of our project and resources, we may need to be selective about the number of trees included in our model in order to prioritize computing power and speed. Another limitation is that Random Forest combines decision trees independently of each other. Therefore, though building decision trees in a particular order or combination may result in a more accurate prediction model, Random Forest does not account for the order of decision trees combined. Upon further investigation following our project, we found that research studies that have previously solved our research question have identified models more accurate than the Random Forest. However, for the purposes of our project, we have included the models within the scope of our class. Further details about the limitations of our modeling algorithms and more accurate models from previous research are outlined in the Discussions.
 
 
-## **Setup: Set up the stage for your experimental results.**
+## Setup
 In the Airbnb dataset, we accessed through Kaggle, the data contained 16 variables that included: id, name, host_id, host_name, neighbourhood_group, neighbourhood, latitude, longitude, room_type, price, minimum_nights, number_of_reviews, last_review, reviews_per_month, calculated_host_listings_count, and availability_365. The data contained 48,895 observations with the most popular borough being Manhattan, the most popular neighborhood being Williamsburg, and the most popular room type being an entire home or apartment. 
 
 Before we ran any models on the data, we performed the steps below in the data-cleaning process (this process is available to replicate in the `Import Data and Data Cleaning .ipynb` notebook): 
-1. We first created a nearby subway line counts variable. We found a dataset with latitude and longitude for each NYC Subway Station. Then, for each Airbnb listing, we calculated its distance to stations in the same borough. Lastly, for each station within 800m, we tallied each unique line that went to those stations
+1. We first created a [nearby_subway_line_counts] variable. We found a dataset with latitude and longitude for each NYC Subway Station. Then, for each Airbnb listing, we calculated its distance to stations in the same borough. Lastly, for each station within 800m, we tallied each unique line that went to those stations
 2. We dropped the columns, ['name', 'host_name', 'last_review', 'Unnamed: 0'], as they served no importance to our study.
 3. We created binary columns for the categorical variables that included ['neighbourhood_group', 'neighbourhood', 'room_type']
 4. We used multiple imputation to account for the 10,051 missing values in the [reviews_per_month] variable. 
 5. We dropped all zero values for the [price] variable.
-6. Lastly, we created a [log_price] column by taking the natural log of the [price] column. We did this to predict the [log_price] variable instead of [price] to account for the variability in the pricing of Airbnb. 
+6. Lastly, we created a [log_price] column by taking the natural log of the [price] column. We did this to predict the [log_price] variable instead of [price] to account for the variability in the prices of Airbnb.
+
+The final dataset, after the data-cleaning process, contained 242 variables with 48,884 observations. 
+
+In our analysis, we ran 8 different machine-learning models. These included: 
+  - Decision Tree Regression
+  - Random Forest Regression
+  - Lasso Regression
+  - Ridge Regression
+  - Partial Least Squares (PLS)
+  - Principal Component Regression (PCR)
+  - KNN Regression
+  - Forward Selection Model
+
+All models we ran using Python 3 on the Jupyter Notebook environment. 
+
+
 
 Describe the experimental setup, including what models you are going to run, what parameters you plan to use, and what computing environment you will execute on.
 Describe the problem setup (e.g., for neural networks, describe the network structure that you are going to use in the experiments).
