@@ -73,7 +73,7 @@ In the Airbnb dataset, we accessed through Kaggle, the data contained 16 variabl
 
       - Optimal Alpha value selected: 0.006210413169280639
   - #### Partial Least Squares (PLS):
-      - Ranged the number of components from 1 - 25 and selected the number of components that resulted in the lowest train MSE
+      - Ranged the number of components from 1 - 25 and selected the number of components that resulted in the lowest test MSE
       - ![image](https://github.com/maggieedavisss/ML-Analysis-on-Airbnb-Prices-in-NYC/assets/151679687/61d03fa2-f771-482f-b609-c8af5ed3c637)
 
       - Number of components selected: 11 
@@ -83,7 +83,7 @@ In the Airbnb dataset, we accessed through Kaggle, the data contained 16 variabl
 
       - Number of principal components selected: 200 
   - #### KNN Regression:
-      - Used cross-validation to find the number of nearest neighbors that resulted in the lowest train MSE. The range of nearest neighbors was 4 - 50.
+      - Used cross-validation to find the number of nearest neighbors that resulted in the lowest test MSE. The range of nearest neighbors was 4 - 50.
       - ![image](https://github.com/maggieedavisss/ML-Analysis-on-Airbnb-Prices-in-NYC/assets/151679687/29a07343-81e4-4716-933c-8a180e1de91a)
 
       - Number of nearest neighbors selected: 13 
