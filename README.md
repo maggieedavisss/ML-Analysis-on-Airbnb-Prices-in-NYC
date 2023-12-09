@@ -33,7 +33,7 @@ Before we ran any models on the data, we performed the steps below in the data-c
 5. We dropped all zero values for the [price] variable.
 6. Lastly, we created a [log_price] column by taking the natural log of the [price] column. We did this to predict the [log_price] variable instead of [price] to account for the variability in the prices of Airbnb.
 
-The final dataset, after the data-cleaning process, contained 242 variables with 48,884 observations. 
+**The final dataset, after the data-cleaning process, contained 242 variables with 48,884 observations.** 
 
 In our analysis, we ran 8 different machine-learning models. These included: 
   - Decision Tree Regression
@@ -47,7 +47,18 @@ In our analysis, we ran 8 different machine-learning models. These included:
 
 All models we ran using Python 3 on the Jupyter Notebook environment. 
 
-
+Below are the parameters and techniques used for each model: 
+  - Decision Tree Regression: Used Kfold cross-validation (n_splits = 5) to select the optimal values for the parameters ['max_depth', 'min_samples_split', 'min_samples_leaf']
+      - The optimal values were: Best max_depth: 10, Best min_samples_split: 10, and Best min_samples_leaf: 30
+  - Random Forest Regression: Unable to perform cross-validation due to a lack of memory and compute power
+      - The parameters were set to: max_features = 4 and n_estimators = 500
+  - Lasso Regression: Used Kfold cross-validation (K=5) to select the optimal value for the alpha parameter 
+      - Optimal Alpha value selected: 0.0005678305304899897
+  - Ridge Regression: Used 
+  - Partial Least Squares (PLS)
+  - Principal Component Regression (PCR)
+  - KNN Regression
+  - Forward Selection Model
 
 Describe the experimental setup, including what models you are going to run, what parameters you plan to use, and what computing environment you will execute on.
 Describe the problem setup (e.g., for neural networks, describe the network structure that you are going to use in the experiments).
