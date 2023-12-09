@@ -54,6 +54,7 @@ In the Airbnb dataset, we accessed through Kaggle, the data contained 16 variabl
 #### Below are the parameters and techniques used for each model: 
   - Decision Tree Regression: Used Kfold cross-validation (n_splits = 5) to select the optimal values for the parameters ['max_depth', 'min_samples_split', 'min_samples_leaf']
       - <img width="641" alt="image" src="https://github.com/maggieedavisss/ML-Analysis-on-Airbnb-Prices-in-NYC/assets/151679687/1c525c65-89ae-4b5c-aa66-a970654ca024"
+        
       - The optimal values were: Best max_depth: 10, Best min_samples_split: 10, and Best min_samples_leaf: 30
   - Random Forest Regression: Unable to perform cross-validation due to a lack of memory and compute power
       - The parameters were set to: max_features = 4 and n_estimators = 500
