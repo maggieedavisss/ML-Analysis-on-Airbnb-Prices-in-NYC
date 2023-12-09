@@ -52,35 +52,35 @@ In the Airbnb dataset, we accessed through Kaggle, the data contained 16 variabl
 **All models we ran using Python 3 on the Jupyter Notebook environment.** 
 
 #### Below are the parameters and techniques used for each model: 
-  - **Decision Tree Regression:** Used Kfold cross-validation (n_splits = 5) to select the optimal values for the parameters ['max_depth', 'min_samples_split', 'min_samples_leaf']
+  - ##### Decision Tree Regression: Used Kfold cross-validation (n_splits = 5) to select the optimal values for the parameters ['max_depth', 'min_samples_split', 'min_samples_leaf']
       - ![image](https://github.com/maggieedavisss/ML-Analysis-on-Airbnb-Prices-in-NYC/assets/151679687/9fbc06e6-5f59-49a1-b2aa-a3c09dbea7bb)
 
       - The optimal values were: Best max_depth: 10, Best min_samples_split: 10, and Best min_samples_leaf: 30
-  - **Random Forest Regression:** Unable to perform cross-validation due to a lack of memory and compute power
+  - ##### Random Forest Regression: Unable to perform cross-validation due to a lack of memory and compute power
       - ![image](https://github.com/maggieedavisss/ML-Analysis-on-Airbnb-Prices-in-NYC/assets/151679687/8767317f-635d-48a7-bc63-5b70cfa8e3df)
 
       - The parameters were set to: max_features = 4 and n_estimators = 500
-  - **Lasso Regression:** Used Kfold cross-validation (K=5) to select the optimal value for the alpha parameter
+  - ##### Lasso Regression: Used Kfold cross-validation (K=5) to select the optimal value for the alpha parameter
       - ![image](https://github.com/maggieedavisss/ML-Analysis-on-Airbnb-Prices-in-NYC/assets/151679687/0dd1b90c-b1c4-4d60-b0b3-161456759433)
 
       - Optimal Alpha value selected: 0.0005678305304899897
-  - **Ridge Regression:** Used Kfold cross-validation (K=5) to select the optimal value for the alpha parameter
+  - ##### Ridge Regression: Used Kfold cross-validation (K=5) to select the optimal value for the alpha parameter
       - ![image](https://github.com/maggieedavisss/ML-Analysis-on-Airbnb-Prices-in-NYC/assets/151679687/dbb638b1-8e83-47d9-bb49-65a93b0e24a8)
 
       - Optimal Alpha value selected: 0.006210413169280639
-  - **Partial Least Squares (PLS):** Ranged the number of components from 1 - 25 and selected the number of components that resulted in the lowest train MSE
+  - ##### Partial Least Squares (PLS): Ranged the number of components from 1 - 25 and selected the number of components that resulted in the lowest train MSE
       - ![image](https://github.com/maggieedavisss/ML-Analysis-on-Airbnb-Prices-in-NYC/assets/151679687/61d03fa2-f771-482f-b609-c8af5ed3c637)
 
       - Number of components selected: 11 
-  - **Principal Component Regression (PCR):** Ranged the number of principal components from 20 - 200 and selected the number of components that resulted in the lowest validation MSE
+  - ##### Principal Component Regression (PCR): Ranged the number of principal components from 20 - 200 and selected the number of components that resulted in the lowest validation MSE
       - ![image](https://github.com/maggieedavisss/ML-Analysis-on-Airbnb-Prices-in-NYC/assets/151679687/32382aab-686d-4cb6-b8fc-4736757bd23e)
 
       - Number of principal components selected: 200 
-  - **KNN Regression:** Used cross-validation to find the number of nearest neighbors that resulted in the lowest train MSE. The range of nearest neighbors was 4 - 50.
+  - ##### KNN Regression: Used cross-validation to find the number of nearest neighbors that resulted in the lowest train MSE. The range of nearest neighbors was 4 - 50.
       - ![image](https://github.com/maggieedavisss/ML-Analysis-on-Airbnb-Prices-in-NYC/assets/151679687/29a07343-81e4-4716-933c-8a180e1de91a)
 
       - Number of nearest neighbors selected: 13 
-  - **Forward Selection Model:** Used the highest R-squared as the parameter to select the "best" forward selection model.
+  - ##### Forward Selection Model: Used the highest R-squared as the parameter to select the "best" forward selection model.
       - ![image](https://github.com/maggieedavisss/ML-Analysis-on-Airbnb-Prices-in-NYC/assets/151679687/b3643b6d-193d-4d81-850c-c100256da9e2)
 
       - R-squared obtained: 0.521
