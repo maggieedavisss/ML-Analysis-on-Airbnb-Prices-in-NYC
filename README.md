@@ -115,7 +115,7 @@ In the Airbnb dataset, we accessed through Kaggle, the data contained 16 variabl
 8. **Availability**: # of days available throughout the year
 9. **Nearby Subway Lines**: Locations within 0.5 miles of subways may be in higher demand
 
-### Least Important Predictors: 
+### Least Important Predictors for Random Forest: 
 - **Most Neighborhoods and Boroughs**: No neighborhoods except for Midtown and no borough except for Manhattan accounted for more than 1% of importance
 - **Host Listings Count**: The amount of listings (which was thought to be an indicator of lister experience and “sharkiness”) turned out to not be too helpful
 - **Number of reviews**: Total count does not indicate price, likely because it could mean the place is really nice or really bad
