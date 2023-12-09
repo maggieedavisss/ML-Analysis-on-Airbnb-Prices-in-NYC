@@ -1,7 +1,7 @@
 # ML Analysis on Airbnb Prices in NYC
-A group of 4 people worked together to perform a machine-learning analysis for Airbnb pricing in New York City. 
-
 **Authors: Maggie Davis, Harper Harrell, Chris Bruce, and Sweta Balaji** 
+
+A group of 4 people worked together to perform a machine-learning analysis for Airbnb pricing in New York City. 
 
 # Reproduce 
 Before you read about our machine-learning analysis, here are some directions on how to use our GitHub Repository to reproduce and further our analysis! In order to access the Airbnb data, you can download the data on Kaggle at `https://www.kaggle.com/datasets/dgomonov/new-york-city-airbnb-open-data` OR you can simply download the `Airbnb NYC Dataset.csv` CSV file in our GitHub Repository. Next, you can import the data and perform data cleaning by accessing the `Import Data and Data Cleaning .ipynb` notebook. Lastly, we ran 8 different machine-learning models when performing our analysis on Airbnb Pricing in NYC. The code for each of the models can be accessed in the `Machine Learning Models` folder. The models found in the folder include `Decision Tree Regression.ipynb`, `Forward Selection .ipynb`, `KNN.ipynb`, `Lasso Regression.ipynb`, `PCR.ipynb`, `PLS.ipynb`, `Random Forest.ipynb`, and `Ridge Regression.ipynb`. 
