@@ -1,4 +1,5 @@
 # ML Analysis on Airbnb Prices in NYC
+<img width="448" alt="image" src="https://github.com/maggieedavisss/ML-Analysis-on-Airbnb-Prices-in-NYC/assets/151679687/124edee1-d45f-4a9e-9319-c29d3907ae8e">
 A group of 4 people worked together to perform a machine-learning analysis for Airbnb pricing in New York City. 
 
 ## Abstract 
