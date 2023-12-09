@@ -46,6 +46,15 @@ Since we did not attempt to look into the XGBoost algorithm, our most predictive
 ## **Conclusion: In several sentences, summarize what you have done in this project.**
 
 ## References
-
+https://www.ustravel.org/sites/default/files/2023-06/us_travel-forecast_summer2023.pdf 
+https://www.airbnb.com/help/article/2503 
+https://www.forbes.com/advisor/mortgages/real-estate/new-york-housing-market/ 
+https://ieeexplore.ieee.org/abstract/document/9253078 
+https://www.nvidia.com/en-us/glossary/data-science/xgboost/
+https://albertum.medium.com/l1-l2-regularization-in-xgboost-regression-7b2db08a59e0 
+https://builtin.com/data-science/random-forest-algorithm 
+https://www.kaggle.com/datasets/dgomonov/new-york-city-airbnb-open-data
+https://data.ny.gov/widgets/i9wp-a4ja
+https://nypost.com/2022/07/14/average-manhattan-rent-breaks-5000-for-the-first-time/
 
 
