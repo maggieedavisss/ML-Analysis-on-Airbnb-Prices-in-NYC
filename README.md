@@ -94,6 +94,32 @@ In the Airbnb dataset, we accessed through Kaggle, the data contained 16 variabl
       - R-squared obtained: 0.521
 
 ## Results
+### Ranking the Models: 
+1. **Random Forest**: 0.19035830548538796
+2. **Decision Tree Regressor**: 0.21295979454894307
+3. **Lasso**: 0.22753221424556327
+4. **PLS**: 0.227535
+5. **Ridge**: 0.22759993189970487
+6. **KNN Regression**: 0.2282538983042809
+7. **Forward Selection Model**: 0.23675961752170155
+8. **PCR**: 0.24525682291028444
+
+### Most Useful Predictors for Random Forest: 
+1. **Entire house/apt**: Having an entire house is very important, and can allow homeowners to list for much higher
+2. **Private room**: Getting your own room is still very helpful 
+3. **Longitude**: Location of listing dictates price heavily
+4. **Latitude**: Location of listing dictates price heavily
+5. **Host ID**: May indicate how much an individual host tends to charge per location
+6. **Listing ID**: Identifies each unique listing in order of post date, so a sort of time-series marker that we don’t get elsewhere
+7. **Reviews Per Month**: Could capture the demand for a certain location
+8. **Availability**: # of days available throughout the year
+9. **Nearby Subway Lines**: Locations within 0.5 miles of subways may be in higher demand
+
+### Least Important Predictors: 
+- **Most Neighborhoods and Boroughs**: No neighborhoods except for Midtown and no borough except for Manhattan accounted for more than 1% of importance
+- **Host Listings Count**: The amount of listings (which was thought to be an indicator of lister experience and “sharkiness”) turned out to not be too helpful
+- **Number of reviews**: Total count does not indicate price, likely because it could mean the place is really nice or really bad
+
 The Random Forest Regressor appeared to be the best model when estimating the most important predictors in our dataset, giving us a mean squared error (MSE) of approximately 0.19. As determined by our Random Forest model, among the most important predictors of Airbnb price were room type (whether the property was an entire house or an apartment), private room (whether or not the property contained a private room for the renter), longitude, and latitude. Our findings indicated that renting a house versus renting an apartment was the most important predictor of Airbnb price. Those who rent a house via Airbnb are more likely to pay more money than for an apartment. This makes intuitive sense as well, given that the size and amenities of a house outweigh those of an apartment-style property. Similarly, the presence of a private room in an apartment may indicate a property’s larger size and access to amenities, which may explain a higher rental price compared to properties without a private room. Additionally, the longitude and latitude of the property may indicate the trends seen in the New York City housing or real estate market. As one travels throughout New York City, there is fluctuation in the rates of crime, infrastructure quality, job markets, etc. that may influence property pricing in certain regions.
 
 ![image](https://github.com/maggieedavisss/ML-Analysis-on-Airbnb-Prices-in-NYC/assets/151679687/4d0d08eb-993d-4948-8adb-6d20fedc4507)
